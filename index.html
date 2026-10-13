@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nor Halimah | Portofolio</title>
+<meta name="description" content="Portofolio Nor Halimah, lulusan S1 Pendidikan Informatika Universitas Trunojoyo Madura. Web developer dan administrasi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070a16;--panel:#0d1124;--line:#232a4d;--text:#e8ebff;--muted:#8d95c4;--a:#7c6cff;--b:#4fe3ff;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(7,10,22,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav b{font-family:Unbounded,sans-serif;font-size:14px;font-weight:700}
+nav ul{display:flex;gap:22px;list-style:none;font-size:14px;color:var(--muted)}
+nav ul a:hover{color:var(--b)}
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero-in{position:relative;display:grid;grid-template-columns:1fr 240px;gap:48px;align-items:center;padding-top:80px;padding-bottom:40px}
+.hero-in>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-in>*:nth-child(2){animation-delay:.2s}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 16px;background:rgba(13,17,36,.7)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--b);box-shadow:0 0 12px var(--b)}
+h1{font-family:Unbounded,sans-serif;font-weight:700;font-size:clamp(40px,8vw,84px);line-height:1.05;margin:22px 0;letter-spacing:-.02em;background:linear-gradient(100deg,#fff 30%,var(--b) 70%,var(--a));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(17px,2.4vw,22px);color:var(--muted);max-width:34ch}
+.role strong{color:var(--text);font-weight:500}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{padding:12px 24px;border-radius:99px;font-weight:700;font-size:15px;border:1px solid var(--line);transition:.2s}
+.btn.p{background:linear-gradient(100deg,var(--a),var(--b));color:#06081a;border:0}
+.btn:hover{transform:translateY(-2px);border-color:var(--b)}
+.photo{position:relative;width:240px;height:300px;border-radius:120px 120px 24px 24px;border:1px solid var(--line);background:linear-gradient(160deg,#1a1f45,#0d1124);overflow:hidden;box-shadow:0 0 60px rgba(124,108,255,.25)}
+.photo span{position:absolute;inset:0;display:grid;place-items:center;font-family:Unbounded,sans-serif;font-size:64px;color:var(--a)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+section{padding:96px 0;border-top:1px solid var(--line)}
+h2{font-family:Unbounded,sans-serif;font-size:clamp(26px,4vw,38px);font-weight:500;margin-bottom:12px;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:62ch;margin-bottom:40px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.stat b{display:block;font-family:Unbounded,sans-serif;font-size:32px;color:var(--b);font-weight:500}
+.stat span{font-size:14px;color:var(--muted)}
+.tl{position:relative;padding-left:32px;border-left:1px solid var(--line);display:grid;gap:36px}
+.item{position:relative}
+.item::before{content:"";position:absolute;left:-39px;top:9px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--a);box-shadow:0 0 12px var(--a)}
+.item.now::before{background:var(--b);border-color:var(--b)}
+.when{font-size:14px;color:var(--b);font-weight:500}
+.item h3{font-size:19px;font-weight:700}
+.item .org{color:var(--muted);margin-bottom:8px}
+.item ul{padding-left:18px;color:#c3c8ee;max-width:78ch}
+.item li{margin-bottom:4px}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:99px;padding:2px 12px;color:var(--muted);margin-left:8px;vertical-align:middle}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px 48px}
+.sk div{display:flex;justify-content:space-between;font-size:15px;margin-bottom:8px}
+.sk em{font-style:normal;color:var(--muted);font-size:14px}
+.bar{height:6px;border-radius:9px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--a),var(--b));transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.on .bar i{width:var(--w)}
+.traits{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px}
+.traits span{border:1px solid var(--line);background:var(--panel);border-radius:99px;padding:8px 18px;font-size:14px}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.cert{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;display:flex;gap:16px}
+.cert b{font-family:Unbounded,sans-serif;font-weight:500;color:var(--a);font-size:15px;min-width:44px}
+.cert span{font-size:15px;color:#c3c8ee}
+.cta{text-align:left}
+.cta .big{display:block;font-family:Unbounded,sans-serif;font-size:clamp(20px,4vw,34px);margin:18px 0 28px;word-break:break-word}
+.cta .big:hover{color:var(--b)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+
+.th,.pimg,.gr figure{background-size:cover;background-position:center;cursor:zoom-in}
+.cert{flex-wrap:wrap}
+.cert .th{flex:0 0 100%;aspect-ratio:4/3;border-radius:10px;border:1px solid var(--line);margin-bottom:4px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.proj{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.pimg{aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(140deg,#1a1f45,#0d1124 60%,#14304a);border-bottom:1px solid var(--line);color:var(--a);font-family:Unbounded,sans-serif;font-size:22px}
+.pimg.has{cursor:zoom-in}.pimg.has span{display:none}
+.pb{padding:22px}.pb h3{font-size:18px;margin-bottom:8px}.pb p{color:#c3c8ee;font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tags span{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:2px 12px;color:var(--muted)}
+.gal{margin-top:56px}.gal h3{font-size:18px;margin-bottom:16px}
+.gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.gr figure{position:relative;aspect-ratio:4/3;border-radius:12px;border:1px solid var(--line);overflow:hidden}
+.gr figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;font-size:13px;background:linear-gradient(transparent,rgba(7,10,22,.9))}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(4,6,14,.92);display:none;place-items:center;padding:24px;cursor:zoom-out}
+#lb.on{display:grid}#lb figure{max-width:min(960px,100%);text-align:center}
+#lb img{max-width:100%;max-height:80vh;border-radius:10px;border:1px solid var(--line)}
+#lb figcaption{margin-top:12px;color:var(--muted);font-size:14px}
+@media(max-width:760px){
+ nav ul{display:none}
+ .hero-in{grid-template-columns:1fr;gap:32px}
+ .photo{width:180px;height:225px;border-radius:90px 90px 20px 20px;order:-1}
+ .photo span{font-size:48px}
+ section{padding:72px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.bar i{width:var(--w)}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>NH</b>
+<ul><li><a href="#tentang">Tentang</a></li><li><a href="#pengalaman">Pengalaman</a></li><li><a href="#proyek">Proyek</a></li><li><a href="#keahlian">Keahlian</a></li><li><a href="#sertifikat">Sertifikat</a></li><li><a href="#kontak">Kontak</a></li></ul></div></nav>
+
+<header id="hero">
+<canvas id="net" aria-hidden="true"></canvas>
+<div class="wrap hero-in">
+ <div>
+  <div class="status"><i></i>Terbuka untuk peluang kerja</div>
+  <h1>Nor Halimah</h1>
+  <p class="role">Lulusan <strong>Pendidikan Informatika</strong> yang membangun website dan merapikan administrasi, dengan IPK 3,84.</p>
+  <div class="btns"><a class="btn p" href="#pengalaman">Lihat pengalaman</a><a class="btn" href="#kontak">Hubungi saya</a></div>
+ </div>
+ <div class="photo"><span>NH</span><img src="img/foto.jpg" alt="Foto Nor Halimah" onerror="this.remove()"></div>
+</div>
+</header>
+
+<section id="tentang"><div class="wrap">
+ <h2>Tentang saya</h2>
+ <p class="lead">Saya lulusan S1 Pendidikan Informatika Universitas Trunojoyo Madura (2022-2026). Saya teliti, disiplin, dan terbiasa mengelola dokumen, menyusun laporan, mengatur jadwal kegiatan, serta menulis surat-menyurat. Saya juga pernah mengembangkan website sebagai web developer magang. Saya nyaman bekerja sendiri maupun dalam tim, dan siap mendukung operasional administrasi perusahaan.</p>
+ <div class="stats">
+  <div class="stat"><b>3,84</b><span>IPK dari skala 4,00</span></div>
+  <div class="stat"><b>20+</b><span>rapat kerja diselenggarakan</span></div>
+  <div class="stat"><b>20+</b><span>kegiatan dengan administrasi disiapkan</span></div>
+  <div class="stat"><b>3</b><span>jabatan di organisasi mahasiswa</span></div>
+ </div>
+</div></section>
+
+<section id="pengalaman"><div class="wrap">
+ <h2>Pengalaman</h2>
+ <p class="lead">Dari magang web developer sampai memimpin divisi organisasi, diurutkan dari yang terbaru.</p>
+ <div class="tl">
+  <div class="item now"><div class="when">September - Desember 2025</div>
+   <h3>Web Developer Magang</h3><div class="org">Dinas Komunikasi dan Informatika Bangkalan</div>
+   <ul><li>Merancang dan mengembangkan website Diskominfo Kabupaten Bangkalan bersama tim.</li><li>Membuat fitur dan antarmuka, sisi front-end maupun back-end sesuai pembagian tugas.</li><li>Menguji, memperbaiki bug, dan menyempurnakan fungsi website.</li><li>Berkoordinasi dengan tim dan pembimbing, serta mendokumentasikan hasil pengembangan.</li></ul></div>
+  <div class="item"><div class="when">2025</div>
+   <h3>Kepala Divisi IT</h3><div class="org">Organisasi Daerah IMA (Ikatan Mahasiswa Arosbaya)</div>
+   <ul><li>Memimpin dan mengoordinasikan seluruh kegiatan Divisi IT dalam pengelolaan informasi organisasi.</li><li>Mengarahkan pembuatan pamflet, brosur, poster, dan presentasi sesuai identitas organisasi.</li><li>Membagi tugas, memberi arahan, dan mengevaluasi program kerja divisi.</li></ul></div>
+  <div class="item"><div class="when">2024</div>
+   <h3>Sekretaris 1</h3><div class="org">HIMAPIF (Himpunan Mahasiswa Prodi Pendidikan Informatika)</div>
+   <ul><li>Mengelola jadwal, dokumen, database, laporan kerja, dan proposal kegiatan.</li><li>Menyelenggarakan 20+ rapat kerja: undangan, bahan rapat, dan notulensi.</li><li>Menyiapkan administrasi 20+ kegiatan: laporan, rencana anggaran, proposal, dan laporan pertanggungjawaban untuk DPM dan Koordinator Program Studi.</li></ul></div>
+  <div class="item"><div class="when">2023</div>
+   <h3>Wakil Sekretaris</h3><div class="org">HIMAPIF</div>
+   <ul><li>Mendukung sekretaris dalam penjadwalan rapat, pengaturan perjalanan, dan surat-menyurat.</li><li>Menyusun agenda rapat, mengelola arsip, dan membuat notulensi.</li></ul></div>
+  <div class="item"><div class="when">November 2020 - Januari 2021</div>
+   <h3>Operator Printing</h3><div class="org">Prasena Artistic Arosbaya Bangkalan</div>
+   <ul><li>Menyiapkan file siap cetak, mengatur settingan sesuai bahan, dan mengoperasikan mesin digital printing.</li><li>Merawat mesin cetak dan membantu pekerjaan finishing.</li></ul></div>
+  <div class="item"><div class="when">2019 - 2026</div>
+   <h3>Pendidikan</h3><div class="org">Universitas Trunojoyo Madura, S1 Pendidikan Informatika<span class="tag">IPK 3,84</span></div>
+   <ul><li>SMKS Al Muhajirin, Teknik Komputer dan Jaringan (2019-2022), nilai rata-rata 85,5.</li></ul></div>
+ </div>
+ <h2 style="margin-top:72px;font-size:22px">Kepanitiaan</h2>
+ <div class="tl" style="gap:14px;margin-top:20px">
+  <div class="item"><div class="when">2024</div><b>Steering Committee</b> Sie Acara, Lomba Film Pendek Se-Jawa Timur</div>
+  <div class="item"><div class="when">2024</div><b>Steering Committee</b> Hubungan Mahasiswa, Semarak Pendidikan Informatika Giat Prestasi</div>
+  <div class="item"><div class="when">2023</div><b>Sekretaris Pelaksana</b> Lomba Film Pendek Se-Jawa Timur</div>
+ </div>
+ <div class="gal" id="g-org" hidden><h3>Dokumentasi organisasi</h3><div class="gr"></div></div>
+ <div class="gal" id="g-panitia" hidden><h3>Dokumentasi kepanitiaan</h3><div class="gr"></div></div>
+</div></section>
+
+<section id="proyek"><div class="wrap">
+ <h2>Proyek</h2>
+ <p class="lead">Hasil kerja yang pernah saya kembangkan dan rancang.</p>
+ <div class="projects">
+  <article class="proj"><div class="pimg" data-src="img/proyek-1.jpg" data-cap="Website Diskominfo Kabupaten Bangkalan"><span>Website</span></div>
+   <div class="pb"><h3>Website Diskominfo Kabupaten Bangkalan</h3>
+   <p>Dikerjakan bersama tim selama magang MBKM (September - Desember 2025): merancang fitur dan antarmuka, pengujian, perbaikan bug, dan dokumentasi.</p>
+   <div class="tags"><span>Front-end</span><span>Back-end</span><span>Testing</span><span>Dokumentasi</span></div>
+   <!-- Punya tautan website? Tambahkan: <a class="btn" href="https://alamat-website" target="_blank" rel="noopener">Kunjungi</a> --></div></article>
+  <article class="proj"><div class="pimg" data-src="img/proyek-2.jpg" data-cap="Materi publikasi Divisi IT IMA"><span>Desain</span></div>
+   <div class="pb"><h3>Materi publikasi Divisi IT IMA</h3>
+   <p>Mengarahkan pembuatan pamflet, brosur, poster, dan presentasi agar sesuai identitas Ikatan Mahasiswa Arosbaya dan mendukung program kerja.</p>
+   <div class="tags"><span>Canva</span><span>Desain grafis</span><span>Kepemimpinan tim</span></div></div></article>
+ </div>
+</div></section>
+
+<section id="keahlian"><div class="wrap">
+ <h2>Keahlian</h2>
+ <p class="lead">Tingkat keahlian sesuai penilaian saya sendiri di CV.</p>
+ <div class="skills" id="sk">
+  <div class="sk"><div>Microsoft Office<em>Ahli</em></div><div class="bar"><i style="--w:92%"></i></div></div>
+  <div class="sk"><div>Dasar Pemrograman Web<em>Menengah</em></div><div class="bar"><i style="--w:62%"></i></div></div>
+  <div class="sk"><div>Pemrograman Berbasis Objek<em>Menengah</em></div><div class="bar"><i style="--w:62%"></i></div></div>
+  <div class="sk"><div>Multimedia Edukasi<em>Menengah</em></div><div class="bar"><i style="--w:62%"></i></div></div>
+  <div class="sk"><div>Desain Grafis (Canva)<em>Menengah</em></div><div class="bar"><i style="--w:62%"></i></div></div>
+ </div>
+ <div class="traits"><span>Kepemimpinan</span><span>Bertanggung jawab</span><span>Jujur dan disiplin</span><span>Kerja sama tim dan mandiri</span><span>Komunikasi efektif</span></div>
+</div></section>
+
+<section id="sertifikat"><div class="wrap">
+ <h2>Sertifikat</h2>
+ <p class="lead">Pelatihan, webinar, dan keputusan organisasi yang pernah saya peroleh.</p>
+ <div class="certs">
+  <div class="cert" data-src="img/sertifikat-1.jpg" data-cap="Sertifikat Magang MBKM, Dinas Komunikasi dan Informatika Kabupaten Bangkalan"><b>2025</b><span>Sertifikat Magang MBKM, Dinas Komunikasi dan Informatika Kabupaten Bangkalan</span></div>
+  <div class="cert" data-src="img/sertifikat-2.jpg" data-cap="SK Organisasi Daerah Ikatan Mahasiswa Arosbaya"><b>2025</b><span>SK Organisasi Daerah Ikatan Mahasiswa Arosbaya</span></div>
+  <div class="cert" data-src="img/sertifikat-3.jpg" data-cap="Webinar Mengenal VBA Excel"><b>2024</b><span>Webinar Mengenal VBA Excel</span></div>
+  <div class="cert" data-src="img/sertifikat-4.jpg" data-cap="Webinar Cloud Computing Fundamentals: Empowering Your Digital Journey"><b>2024</b><span>Webinar Cloud Computing Fundamentals: Empowering Your Digital Journey</span></div>
+  <div class="cert" data-src="img/sertifikat-5.jpg" data-cap="SK Organisasi Himpunan Mahasiswa Pendidikan Informatika"><b>2024</b><span>SK Organisasi Himpunan Mahasiswa Pendidikan Informatika</span></div>
+  <div class="cert" data-src="img/sertifikat-6.jpg" data-cap="Pelatihan Game Edukasi Berbasis Unity"><b>2023</b><span>Pelatihan Game Edukasi Berbasis Unity</span></div>
+  <div class="cert" data-src="img/sertifikat-7.jpg" data-cap="SK Organisasi Himpunan Mahasiswa Pendidikan Informatika"><b>2023</b><span>SK Organisasi Himpunan Mahasiswa Pendidikan Informatika</span></div>
+  <div class="cert" data-src="img/sertifikat-8.jpg" data-cap="Praktik Kerja Lapangan, Prasena Artistic (2020-2021)"><b>2020</b><span>Praktik Kerja Lapangan, Prasena Artistic (2020-2021)</span></div>
+ </div>
+</div></section>
+
+<section id="kontak" class="cta"><div class="wrap">
+ <h2>Mari bekerja sama</h2>
+ <p class="lead">Saya siap berkontribusi di bidang web maupun administrasi. Hubungi saya lewat email atau WhatsApp.</p>
+ <a class="big" href="mailto:norhalimah.pif@gmail.com">norhalimah.pif@gmail.com</a>
+ <div class="btns" style="margin-top:0"><a class="btn p" href="https://wa.me/6285792562863" target="_blank" rel="noopener">Chat WhatsApp</a><a class="btn" href="tel:+6285792562863">085792562863</a></div>
+ <p style="margin-top:24px;color:var(--muted)">Bangkalan, Madura</p>
+</div></section>
+
+<div id="lb" role="dialog" aria-label="Pratinjau gambar"><figure><img alt=""><figcaption></figcaption></figure></div>
+<footer><div class="wrap">&copy; 2026 Nor Halimah</div></footer>
+
+<script>
+(function(){
+ var c=document.getElementById('net'),x=c.getContext('2d'),W,H,P=[],m={x:-999,y:-999};
+ var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ function size(){var d=devicePixelRatio||1;W=c.clientWidth;H=c.clientHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+  var n=Math.min(90,Math.floor(W*H/14000));P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})}
+ function draw(){
+  x.clearRect(0,0,W,H);
+  for(var i=0;i<P.length;i++){var p=P[i];
+   if(!still){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+    var dx=m.x-p.x,dy=m.y-p.y,d=Math.hypot(dx,dy);if(d<160){p.x+=dx*.008;p.y+=dy*.008}}
+   for(var j=i+1;j<P.length;j++){var q=P[j],l=Math.hypot(p.x-q.x,p.y-q.y);
+    if(l<120){x.strokeStyle='rgba(124,108,255,'+(.35*(1-l/120))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+   var dm=Math.hypot(m.x-p.x,m.y-p.y);
+   if(dm<160){x.strokeStyle='rgba(79,227,255,'+(.7*(1-dm/160))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}
+   x.fillStyle=dm<160?'#4fe3ff':'rgba(190,198,255,.7)';x.beginPath();x.arc(p.x,p.y,dm<160?2.4:1.6,0,7);x.fill()}
+  if(!still)requestAnimationFrame(draw)}
+ addEventListener('resize',size);
+ c.parentNode.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});
+ c.parentNode.addEventListener('pointerleave',function(){m.x=m.y=-999});
+ size();draw();
+ var sk=document.getElementById('sk');
+ if('IntersectionObserver' in window){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){sk.classList.add('on');o.disconnect()}},{threshold:.3}).observe(sk)}else sk.classList.add('on');
+
+ var lb=document.getElementById('lb');
+ function show(src,cap){lb.querySelector('img').src=src;lb.querySelector('img').alt=cap;lb.querySelector('figcaption').textContent=cap;lb.classList.add('on')}
+ lb.onclick=function(){lb.classList.remove('on')};
+ addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+ function probe(src,ok){var i=new Image();i.onload=ok;i.src=src}
+ document.querySelectorAll('[data-src]').forEach(function(el){
+  var src=el.dataset.src,cap=el.dataset.cap||'';
+  probe(src,function(){
+   var t=el;
+   if(el.classList.contains('cert')){t=document.createElement('div');t.className='th';el.insertBefore(t,el.firstChild)}
+   t.style.backgroundImage='url("'+src+'")';t.classList.add('has');
+   t.onclick=function(){show(src,cap)}})});
+ var G={
+  'g-org':[['img/ima-1.jpg','Divisi IT IMA 2025'],['img/ima-2.jpg','Divisi IT IMA 2025'],['img/ima-3.jpg','Divisi IT IMA 2025'],['img/himapif-1.jpg','HIMAPIF 2024'],['img/himapif-2.jpg','HIMAPIF 2024'],['img/himapif-3.jpg','HIMAPIF 2023']],
+  'g-panitia':[['img/panitia-1.jpg','Lomba Film Pendek Se-Jawa Timur'],['img/panitia-2.jpg','Lomba Film Pendek Se-Jawa Timur'],['img/panitia-3.jpg','Semarak Pendidikan Informatika Giat Prestasi']]};
+ Object.keys(G).forEach(function(id){var box=document.getElementById(id),gr=box.querySelector('.gr');
+  G[id].forEach(function(it){probe(it[0],function(){
+   var f=document.createElement('figure');f.style.backgroundImage='url("'+it[0]+'")';
+   f.innerHTML='<figcaption></figcaption>';f.firstChild.textContent=it[1];
+   f.onclick=function(){show(it[0],it[1])};gr.appendChild(f);box.hidden=false})})});
+})();
+</script>
+</body>
+</html>
